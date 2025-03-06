@@ -107,7 +107,7 @@
 ]
 ```
 
-1.  Create and execute a Python program called `moviesPrint.py` with this code:
+2.  Create and execute a Python program called `moviesPrint.py` with this code:
 
 ```python
 import json
@@ -120,7 +120,7 @@ for movie in movies:
     print(movie)    
 ```
 
-2.  Create and execute a Python program called `moviesUpdate.py` with this code:
+3.  Create and execute a Python program called `moviesUpdate.py` with this code:
 
     ```python
     import json
@@ -143,7 +143,7 @@ for movie in movies:
 
     View the updated `movies.json` file.
 
-3.  Create and execute a new Python program called `moviesByYear.py`.  When executed it should ask the user to input a year and then print movies from that year.
+4.  Create and execute a new Python program called `moviesByYear.py`.  When executed it should ask the user to input a year and then print movies from that year.
 
     Expected Output
 
