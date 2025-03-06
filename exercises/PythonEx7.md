@@ -78,3 +78,80 @@
     {"name": "Pedri", "club": "FC Barcelona", "country": "Spain", "caps": 15, "goals": 2}
     ```
 
+# Lab #2
+
+1.  In the project folder called `Ex7`  create a new ``movies.json`` file with this content:
+
+```json
+[
+  {
+    "title": "Gladiator",
+    "year": 2000
+  },
+  {
+    "title": "A Beautiful Mind",
+    "year": 2001
+  },
+  {
+    "title": "Chicago",
+    "year": 2002
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003
+  },
+  {
+    "title": "The Aviator",
+    "year": 2004
+  }
+]
+```
+
+1.  Create and execute a Python program called `moviesPrint.py` with this code:
+
+```python
+import json
+
+f = open("movies.json", "r")
+movies = json.loads(f.read())
+f.close()
+
+for movie in movies:
+    print(movie)    
+```
+
+1.  Create and execute a Python program called `moviesUpdate.py` with this code:
+
+    ```python
+    import json
+
+    f = open("movies.json", "r")
+    movies = json.loads(f.read())
+    f.close()
+
+    movie = {
+        "title": "Slumdog Millionaire",
+        "year": 2005
+    }
+
+    movies.append(movie)
+
+    f = open('movies.json', "w")
+    f.write(json.dumps(movies, indent=4))
+    f.close()
+    ```
+
+    View the updated `movies.json` file.
+
+1.  Create and execute a new Python program called `moviesByYear.py`.  When executed it should ask the user to input a year and then print movies from that year.
+
+    Expected Output
+
+    ```
+    Input year:2005
+
+    -Movies from 2005-
+    Slumdog Millionaire
+
+    ```
+
